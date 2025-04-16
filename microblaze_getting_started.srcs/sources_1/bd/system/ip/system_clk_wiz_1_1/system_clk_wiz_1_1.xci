@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "system_clk_wiz_1_1",
-    "cell_name": "clk_wiz_1",
+    "cell_name": "clk_wiz",
     "component_reference": "xilinx.com:ip:clk_wiz:6.0",
     "ip_revision": "14",
     "gen_directory": "../../../../../../microblaze_getting_started.gen/sources_1/bd/system/ip/system_clk_wiz_1_1",

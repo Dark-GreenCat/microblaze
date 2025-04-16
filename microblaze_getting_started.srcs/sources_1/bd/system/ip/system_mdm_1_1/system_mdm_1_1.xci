@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "system_mdm_1_1",
-    "cell_name": "mdm_1",
+    "cell_name": "debug_module",
     "component_reference": "xilinx.com:ip:mdm_riscv:1.0",
     "ip_revision": "2",
     "gen_directory": "../../../../../../microblaze_getting_started.gen/sources_1/bd/system/ip/system_mdm_1_1",

@@ -4,3 +4,10 @@ microblaze_getting_started.hw
 microblaze_getting_started.ip_user_files
 microblaze_getting_started.runs
 microblaze_getting_started.sim
+vitis_new_workspace
+vitis_workspace
+workspace
+workspace_15h33
+*.xsa
+*.log
+.Xil
