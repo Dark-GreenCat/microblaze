@@ -1,0 +1,57 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-189,-45",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_USB_UART_RX -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace port port-id_USB_UART_TX -pg 1 -lvl 3 -x 790 -y 80 -defaultsOSRD
+preplace port port-id_SYSCLK0_300_N -pg 1 -lvl 0 -x -10 -y 360 -defaultsOSRD
+preplace port port-id_SYSCLK0_300_P -pg 1 -lvl 0 -x -10 -y 380 -defaultsOSRD
+preplace port port-id_rst_n -pg 1 -lvl 0 -x -10 -y 400 -defaultsOSRD
+preplace port port-id_c0_ddr4_parity -pg 1 -lvl 3 -x 790 -y 380 -defaultsOSRD
+preplace port port-id_c0_ddr4_reset_n -pg 1 -lvl 3 -x 790 -y 400 -defaultsOSRD
+preplace port port-id_c0_ddr4_cke -pg 1 -lvl 3 -x 790 -y 260 -defaultsOSRD
+preplace port port-id_c0_ddr4_cs_n -pg 1 -lvl 3 -x 790 -y 280 -defaultsOSRD
+preplace port port-id_c0_ddr4_ck_c -pg 1 -lvl 3 -x 790 -y 220 -defaultsOSRD
+preplace port port-id_c0_ddr4_ck_t -pg 1 -lvl 3 -x 790 -y 240 -defaultsOSRD
+preplace port port-id_c0_ddr4_odt -pg 1 -lvl 3 -x 790 -y 360 -defaultsOSRD
+preplace port port-id_c0_ddr4_act_n -pg 1 -lvl 3 -x 790 -y 140 -defaultsOSRD
+preplace port port-id_c0_ddr4_ui_clk -pg 1 -lvl 3 -x 790 -y 120 -defaultsOSRD
+preplace portBus c0_ddr4_dq -pg 1 -lvl 3 -x 790 -y 300 -defaultsOSRD
+preplace portBus c0_ddr4_dqs_c -pg 1 -lvl 3 -x 790 -y 320 -defaultsOSRD
+preplace portBus c0_ddr4_ba -pg 1 -lvl 3 -x 790 -y 180 -defaultsOSRD
+preplace portBus c0_ddr4_bg -pg 1 -lvl 3 -x 790 -y 200 -defaultsOSRD
+preplace portBus c0_ddr4_adr -pg 1 -lvl 3 -x 790 -y 160 -defaultsOSRD
+preplace portBus c0_ddr4_dqs_t -pg 1 -lvl 3 -x 790 -y 340 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 140 -defaultsOSRD
+preplace inst memory_system_wrapper_0 -pg 1 -lvl 2 -x 480 -y 270 -defaultsOSRD
+preplace netloc USB_UART_RX_1 1 0 2 NJ 240 N
+preplace netloc SYSCLK0_300_N_1 1 0 2 NJ 360 N
+preplace netloc SYSCLK0_300_P_1 1 0 2 NJ 380 N
+preplace netloc rst_n_1 1 0 2 NJ 400 N
+preplace netloc memory_system_wrapper_0_UART_txd 1 2 1 N 80
+preplace netloc xlconstant_0_dout 1 1 1 190 140n
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_ba 1 2 1 N 180
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_adr 1 2 1 N 160
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_act_n 1 2 1 N 140
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_bg 1 2 1 N 200
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_ck_c 1 2 1 N 220
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_ck_t 1 2 1 N 240
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_cke 1 2 1 N 260
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_cs_n 1 2 1 N 280
+preplace netloc Net 1 2 1 N 300
+preplace netloc Net1 1 2 1 N 320
+preplace netloc Net2 1 2 1 N 340
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_odt 1 2 1 N 360
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_par 1 2 1 N 380
+preplace netloc memory_system_wrapper_0_ddr4_sdram_c0_reset_n 1 2 1 N 400
+preplace netloc memory_system_wrapper_0_c0_ddr4_ui_clk 1 2 1 N 120
+levelinfo -pg 1 -10 100 480 790
+pagesize -pg 1 -db -bbox -sgen -180 -90 990 540
+"
+}
+{
+   "da_clkrst_cnt":"2"
+}

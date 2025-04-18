@@ -1,0 +1,84 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.728671",
+   "Default View_TopLeft":"-261,294",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port ddr4_sdram_c0 -pg 1 -lvl 6 -x 1710 -y 950 -defaultsOSRD
+preplace port aclk -pg 1 -lvl 0 -x -10 -y 970 -defaultsOSRD
+preplace port VECTOR_REGFILE_PORT -pg 1 -lvl 0 -x -10 -y 520 -defaultsOSRD
+preplace port MATRIX_REGFILE_PORT -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace port CDMA_VECTOR_S_AXI_CTRL -pg 1 -lvl 0 -x -10 -y 790 -defaultsOSRD
+preplace port CDMA_MATRIX_S_AXI_CTRL -pg 1 -lvl 0 -x -10 -y 710 -defaultsOSRD
+preplace port C0_DDR4_S_AXI_CTRL -pg 1 -lvl 0 -x -10 -y 990 -defaultsOSRD
+preplace port port-id_rst_n -pg 1 -lvl 0 -x -10 -y 1050 -defaultsOSRD
+preplace port port-id_ddr4_sdram_c0_init_calib_complete -pg 1 -lvl 6 -x 1710 -y 970 -defaultsOSRD
+preplace port port-id_cdma_matrix_introut -pg 1 -lvl 6 -x 1710 -y 640 -defaultsOSRD
+preplace port port-id_cdma_vector_introut -pg 1 -lvl 6 -x 1710 -y 830 -defaultsOSRD
+preplace port port-id_ddr4_sdram_c0_interrupt -pg 1 -lvl 6 -x 1710 -y 1070 -defaultsOSRD
+preplace port port-id_cdma_ctrl_aclk -pg 1 -lvl 0 -x -10 -y 950 -defaultsOSRD
+preplace port port-id_c0_ddr4_ctrl_clk -pg 1 -lvl 6 -x 1710 -y 990 -defaultsOSRD
+preplace inst ddr4_ctrl_c0 -pg 1 -lvl 4 -x 1260 -y 1010 -defaultsOSRD
+preplace inst axi_cdma_matrix -pg 1 -lvl 4 -x 1260 -y 630 -defaultsOSRD
+preplace inst input_rst_n_inv -pg 1 -lvl 3 -x 840 -y 1050 -defaultsOSRD
+preplace inst axi_bram_ctrl_matrix -pg 1 -lvl 3 -x 840 -y 130 -defaultsOSRD
+preplace inst axi_smc_matrix -pg 1 -lvl 2 -x 480 -y 610 -defaultsOSRD
+preplace inst axi_bram_ctrl_vector -pg 1 -lvl 3 -x 840 -y 390 -defaultsOSRD
+preplace inst axi_cdma_vector -pg 1 -lvl 4 -x 1260 -y 820 -defaultsOSRD
+preplace inst axi_smc_vector -pg 1 -lvl 2 -x 480 -y 870 -defaultsOSRD
+preplace inst c0_ddr4_ui_clk_sync_rst_inv -pg 1 -lvl 1 -x 170 -y 890 -defaultsOSRD
+preplace inst smartconnect_1 -pg 1 -lvl 3 -x 840 -y 620 -defaultsOSRD
+preplace inst vector_register_file -pg 1 -lvl 5 -x 1580 -y 440 -defaultsOSRD
+preplace inst matrix_register_file -pg 1 -lvl 5 -x 1580 -y 180 -defaultsOSRD
+preplace inst matrix_addr_decode -pg 1 -lvl 4 -x 1260 -y 80 -defaultsOSRD
+preplace inst vector_addr_decode -pg 1 -lvl 4 -x 1260 -y 340 -defaultsOSRD
+preplace netloc aclk1_0_1 1 0 4 10J 780 NJ 780 NJ 780 1080
+preplace netloc axi_bram_ctrl_matrix_bram_addr_a 1 3 1 N 80
+preplace netloc axi_bram_ctrl_matrix_bram_clk_a 1 3 2 1040 140 NJ
+preplace netloc axi_bram_ctrl_matrix_bram_en_a 1 3 2 1020 200 NJ
+preplace netloc axi_bram_ctrl_matrix_bram_rst_a 1 3 2 1010 220 NJ
+preplace netloc axi_bram_ctrl_matrix_bram_we_a 1 3 2 1000 240 NJ
+preplace netloc axi_bram_ctrl_matrix_bram_wrdata_a 1 3 2 1030 160 NJ
+preplace netloc axi_bram_ctrl_vector_bram_addr_a 1 3 1 N 340
+preplace netloc axi_bram_ctrl_vector_bram_clk_a 1 3 2 1040 400 NJ
+preplace netloc axi_bram_ctrl_vector_bram_en_a 1 3 2 1010 460 NJ
+preplace netloc axi_bram_ctrl_vector_bram_rst_a 1 3 2 N 440 1440J
+preplace netloc axi_bram_ctrl_vector_bram_we_a 1 3 2 1000 500 NJ
+preplace netloc axi_bram_ctrl_vector_bram_wrdata_a 1 3 2 1030 420 NJ
+preplace netloc axi_cdma_0_cdma_introut 1 4 2 NJ 640 NJ
+preplace netloc axi_cdma_1_cdma_introut 1 4 2 NJ 830 NJ
+preplace netloc ddr4_0_c0_ddr4_interrupt 1 4 2 NJ 1070 NJ
+preplace netloc ddr4_0_c0_ddr4_ui_clk_sync_rst 1 1 3 330 690 670 740 1060
+preplace netloc ddr4_0_c0_ddr4_ui_clk_sync_rst1 1 0 5 20 1130 NJ 1130 NJ 1130 NJ 1130 1440
+preplace netloc ddr4_0_c0_init_calib_complete 1 4 2 NJ 970 NJ
+preplace netloc ddr4_ctrl_c0_c0_ddr4_ui_clk 1 1 5 340 730 640 730 1070 730 1450 990 NJ
+preplace netloc matrix_addr_decode1_Dout 1 4 1 1440J 340n
+preplace netloc matrix_register_file_douta 1 3 2 1020 20 1450J
+preplace netloc resetn_1 1 0 3 NJ 1050 NJ 1050 NJ
+preplace netloc resetn_inv_0_Res 1 3 1 NJ 1050
+preplace netloc vector_register_file_douta 1 3 2 1000 410 1450J
+preplace netloc xlslice_0_Dout 1 4 1 1440J 80n
+preplace netloc BRAM_PORTB_0_1 1 0 5 NJ 520 NJ 520 NJ 520 NJ 520 NJ
+preplace netloc BRAM_PORTB_1_1 1 0 5 NJ 260 NJ 260 NJ 260 NJ 260 NJ
+preplace netloc C0_DDR4_S_AXI_CTRL_0_1 1 0 4 NJ 990 NJ 990 NJ 990 NJ
+preplace netloc S_AXI_LITE_0_1 1 0 4 NJ 790 NJ 790 NJ 790 NJ
+preplace netloc S_AXI_LITE_1_1 1 0 4 NJ 710 NJ 710 NJ 710 1010J
+preplace netloc axi_cdma_0_M_AXI 1 1 4 350 530 NJ 530 NJ 530 1440
+preplace netloc axi_cdma_1_M_AXI 1 1 4 350 720 NJ 720 NJ 720 1440
+preplace netloc axi_smc_1_M00_AXI 1 2 1 650 370n
+preplace netloc axi_smc_M00_AXI 1 2 1 610 110n
+preplace netloc axi_smc_matrix_M01_AXI 1 2 1 660 610n
+preplace netloc axi_smc_vector_M01_AXI 1 2 1 680 590n
+preplace netloc ddr4_0_C0_DDR4 1 4 2 NJ 950 NJ
+preplace netloc default_300mhz_clk0_1 1 0 4 NJ 970 NJ 970 NJ 970 NJ
+preplace netloc smartconnect_1_M00_AXI 1 3 1 1000 620n
+levelinfo -pg 1 -10 170 480 840 1260 1580 1710
+pagesize -pg 1 -db -bbox -sgen -260 0 2020 1140
+"
+}
+{
+   "da_axi4_cnt":"9",
+   "da_board_cnt":"3",
+   "da_bram_cntlr_cnt":"2"
+}

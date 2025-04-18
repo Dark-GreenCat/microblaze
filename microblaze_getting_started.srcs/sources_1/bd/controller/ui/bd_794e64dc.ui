@@ -1,0 +1,74 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.466719",
+   "Default View_TopLeft":"-341,-120",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port UART -pg 1 -lvl 7 -x 1940 -y 70 -defaultsOSRD
+preplace port CDMA_VECTOR_M_AXI_CTRL -pg 1 -lvl 7 -x 1940 -y 510 -defaultsOSRD
+preplace port CDMA_MATRIX_M_AXI_CTRL -pg 1 -lvl 7 -x 1940 -y 490 -defaultsOSRD
+preplace port C0_DDR4_M_AXI_CTRL -pg 1 -lvl 7 -x 1940 -y 530 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 850 -defaultsOSRD
+preplace port port-id_rst_n -pg 1 -lvl 0 -x 0 -y 950 -defaultsOSRD
+preplace portBus peripheral_aresetn -pg 1 -lvl 7 -x 1940 -y 1050 -defaultsOSRD
+preplace portBus interconnect_aresetn -pg 1 -lvl 7 -x 1940 -y 1030 -defaultsOSRD
+preplace portBus start_matrix_mult_request -pg 1 -lvl 7 -x 1940 -y 330 -defaultsOSRD
+preplace portBus src_vector_reg_addr -pg 1 -lvl 7 -x 1940 -y 430 -defaultsOSRD
+preplace portBus src_matrix_reg_addr -pg 1 -lvl 7 -x 1940 -y 230 -defaultsOSRD
+preplace portBus dst_vector_reg_addr -pg 1 -lvl 7 -x 1940 -y 130 -defaultsOSRD
+preplace portBus ddr4_sdram_c0_init_calib_complete -pg 1 -lvl 0 -x 0 -y 670 -defaultsOSRD
+preplace portBus ddr4_sdram_c0_interrupt -pg 1 -lvl 0 -x 0 -y 690 -defaultsOSRD
+preplace portBus cdma_vector_introut -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
+preplace portBus cdma_matrix_introut -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
+preplace inst microblaze_riscv -pg 1 -lvl 3 -x 710 -y 810 -defaultsOSRD
+preplace inst microblaze_riscv_local_memory -pg 1 -lvl 4 -x 1140 -y 820 -defaultsOSRD
+preplace inst microblaze_debug_module -pg 1 -lvl 2 -x 310 -y 1020 -defaultsOSRD
+preplace inst rst_clk -pg 1 -lvl 5 -x 1500 -y 1010 -defaultsOSRD
+preplace inst axi_gpio -pg 1 -lvl 5 -x 1500 -y 400 -defaultsOSRD
+preplace inst axi_uartlite -pg 1 -lvl 5 -x 1500 -y 80 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1140 -y 490 -defaultsOSRD
+preplace inst xlslice_12_12 -pg 1 -lvl 6 -x 1810 -y 330 -defaultsOSRD
+preplace inst xlslice_11_8 -pg 1 -lvl 6 -x 1810 -y 430 -defaultsOSRD
+preplace inst xlslice_3_0 -pg 1 -lvl 6 -x 1810 -y 130 -defaultsOSRD
+preplace inst xlslice_7_4 -pg 1 -lvl 6 -x 1810 -y 230 -defaultsOSRD
+preplace inst xlconcat -pg 1 -lvl 2 -x 310 -y 710 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 790 -defaultsOSRD
+preplace netloc In0_0_1 1 0 2 NJ 670 NJ
+preplace netloc In1_0_1 1 0 2 NJ 690 NJ
+preplace netloc In2_0_1 1 0 2 NJ 710 NJ
+preplace netloc In3_0_1 1 0 2 NJ 730 NJ
+preplace netloc axi_gpio_0_gpio_io_o 1 5 1 1700 130n
+preplace netloc mdm_1_debug_sys_rst 1 2 3 NJ 1030 NJ 1030 N
+preplace netloc microblaze_riscv_0_Clk 1 0 5 20J 720 180J 810 430 720 980 280 1300
+preplace netloc rst_Clk_100M_bus_struct_reset 1 3 3 990 910 NJ 910 1690
+preplace netloc rst_Clk_100M_mb_reset 1 2 4 450 900 NJ 900 NJ 900 1680
+preplace netloc rst_clk_interconnect_aresetn 1 5 2 NJ 1030 NJ
+preplace netloc rst_clk_peripheral_aresetn 1 3 4 990 290 1320 480 1700 1050 NJ
+preplace netloc rst_n_1 1 0 5 NJ 950 NJ 950 NJ 950 NJ 950 1290J
+preplace netloc xlconcat_0_dout 1 2 4 NJ 710 NJ 710 NJ 710 1680
+preplace netloc xlconstant_0_dout 1 1 1 190J 750n
+preplace netloc xlslice_0_Dout 1 6 1 NJ 330
+preplace netloc xlslice_1_Dout 1 6 1 NJ 430
+preplace netloc xlslice_2_Dout 1 6 1 NJ 130
+preplace netloc xlslice_3_Dout 1 6 1 NJ 230
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1290 60n
+preplace netloc axi_mem_intercon_M01_AXI 1 4 1 1310 380n
+preplace netloc axi_mem_intercon_M02_AXI 1 4 3 NJ 490 NJ 490 NJ
+preplace netloc axi_mem_intercon_M03_AXI 1 4 3 NJ 510 NJ 510 NJ
+preplace netloc axi_mem_intercon_M04_AXI 1 4 3 NJ 530 NJ 530 NJ
+preplace netloc axi_uartlite_0_UART 1 5 2 NJ 70 NJ
+preplace netloc microblaze_riscv_0_debug 1 2 1 440 800n
+preplace netloc microblaze_riscv_0_dlmb_1 1 3 1 N 790
+preplace netloc microblaze_riscv_0_ilmb_1 1 3 1 N 810
+preplace netloc microblaze_riscv_M_AXI_DP 1 3 1 970 350n
+levelinfo -pg 1 0 100 310 710 1140 1500 1810 1940
+pagesize -pg 1 -db -bbox -sgen -340 0 2220 1120
+"
+}
+{
+   "da_axi4_cnt":"4",
+   "da_board_cnt":"7",
+   "da_clkrst_cnt":"2",
+   "da_microblaze_riscv_cnt":"3"
+}

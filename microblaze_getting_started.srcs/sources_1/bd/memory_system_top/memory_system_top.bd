@@ -1,0 +1,524 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x770FE8E8C73B7575",
+      "device": "xcu250-figd2104-2L-e",
+      "gen_directory": "../../../../microblaze_getting_started.gen/sources_1/bd/memory_system_top",
+      "name": "memory_system_top",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xlconstant_0": "",
+      "memory_system_wrapper_0": ""
+    },
+    "ports": {
+      "USB_UART_RX": {
+        "direction": "I"
+      },
+      "USB_UART_TX": {
+        "direction": "O"
+      },
+      "SYSCLK0_300_N": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst_n"
+          },
+          "CLK_DOMAIN": {
+            "value": "memory_system_top_clk_clk_n_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "SYSCLK0_300_P": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst_n:rst_n"
+          },
+          "CLK_DOMAIN": {
+            "value": "memory_system_top_clk_clk_p_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "c0_ddr4_dq": {
+        "direction": "IO",
+        "left": "71",
+        "right": "0"
+      },
+      "c0_ddr4_dqs_c": {
+        "direction": "IO",
+        "left": "17",
+        "right": "0"
+      },
+      "c0_ddr4_parity": {
+        "direction": "O"
+      },
+      "c0_ddr4_reset_n": {
+        "direction": "O"
+      },
+      "c0_ddr4_ba": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "c0_ddr4_bg": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "c0_ddr4_cke": {
+        "direction": "O"
+      },
+      "c0_ddr4_adr": {
+        "direction": "O",
+        "left": "16",
+        "right": "0"
+      },
+      "c0_ddr4_cs_n": {
+        "direction": "O"
+      },
+      "c0_ddr4_ck_c": {
+        "direction": "O"
+      },
+      "c0_ddr4_ck_t": {
+        "direction": "O"
+      },
+      "c0_ddr4_odt": {
+        "direction": "O"
+      },
+      "c0_ddr4_dqs_t": {
+        "direction": "IO",
+        "left": "17",
+        "right": "0"
+      },
+      "c0_ddr4_act_n": {
+        "direction": "O"
+      },
+      "c0_ddr4_ui_clk": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "memory_system_top_memory_system_wrapper_0_1_c0_ddr4_ui_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "memory_system_top_xlconstant_0_0",
+        "xci_path": "ip/memory_system_top_xlconstant_0_0/memory_system_top_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "4096"
+          }
+        }
+      },
+      "memory_system_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:memory_system_wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "memory_system_top_memory_system_wrapper_0_1",
+        "xci_path": "ip/memory_system_top_memory_system_wrapper_0_1/memory_system_top_memory_system_wrapper_0_1.xci",
+        "inst_hier_path": "memory_system_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "memory_system_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "MATRIX_REGFILE_PORT_addr": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "MATRIX_REGFILE_PORT_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "MATRIX_REGFILE_PORT_din": {
+            "direction": "I",
+            "left": "4095",
+            "right": "0"
+          },
+          "MATRIX_REGFILE_PORT_dout": {
+            "direction": "O",
+            "left": "4095",
+            "right": "0"
+          },
+          "MATRIX_REGFILE_PORT_en": {
+            "direction": "I"
+          },
+          "MATRIX_REGFILE_PORT_we": {
+            "direction": "I",
+            "left": "511",
+            "right": "0"
+          },
+          "UART_rxd": {
+            "direction": "I"
+          },
+          "UART_txd": {
+            "direction": "O"
+          },
+          "VECTOR_REGFILE_PORT_addr": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "VECTOR_REGFILE_PORT_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "VECTOR_REGFILE_PORT_din": {
+            "direction": "I",
+            "left": "1023",
+            "right": "0"
+          },
+          "VECTOR_REGFILE_PORT_dout": {
+            "direction": "O",
+            "left": "1023",
+            "right": "0"
+          },
+          "VECTOR_REGFILE_PORT_en": {
+            "direction": "I"
+          },
+          "VECTOR_REGFILE_PORT_we": {
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "c0_ddr4_ui_clk": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "clk_clk_n": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst_n",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "300000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "memory_system_top_clk_clk_n_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_clk_p": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "300000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "memory_system_top_clk_clk_p_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ddr4_sdram_c0_act_n": {
+            "direction": "O"
+          },
+          "ddr4_sdram_c0_adr": {
+            "direction": "O",
+            "left": "16",
+            "right": "0"
+          },
+          "ddr4_sdram_c0_ba": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "ddr4_sdram_c0_bg": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "ddr4_sdram_c0_ck_c": {
+            "direction": "O"
+          },
+          "ddr4_sdram_c0_ck_t": {
+            "direction": "O"
+          },
+          "ddr4_sdram_c0_cke": {
+            "direction": "O"
+          },
+          "ddr4_sdram_c0_cs_n": {
+            "direction": "O"
+          },
+          "ddr4_sdram_c0_dq": {
+            "direction": "IO",
+            "left": "71",
+            "right": "0"
+          },
+          "ddr4_sdram_c0_dqs_c": {
+            "direction": "IO",
+            "left": "17",
+            "right": "0"
+          },
+          "ddr4_sdram_c0_dqs_t": {
+            "direction": "IO",
+            "left": "17",
+            "right": "0"
+          },
+          "ddr4_sdram_c0_odt": {
+            "direction": "O"
+          },
+          "ddr4_sdram_c0_par": {
+            "direction": "O"
+          },
+          "ddr4_sdram_c0_reset_n": {
+            "direction": "O"
+          },
+          "dst_vector_reg_addr": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "src_matrix_reg_addr": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "src_vector_reg_addr": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "start_matrix_mult_request": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "c0_ddr4_dq",
+          "memory_system_wrapper_0/ddr4_sdram_c0_dq"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "c0_ddr4_dqs_c",
+          "memory_system_wrapper_0/ddr4_sdram_c0_dqs_c"
+        ]
+      },
+      "Net2": {
+        "ports": [
+          "c0_ddr4_dqs_t",
+          "memory_system_wrapper_0/ddr4_sdram_c0_dqs_t"
+        ]
+      },
+      "SYSCLK0_300_N_1": {
+        "ports": [
+          "SYSCLK0_300_N",
+          "memory_system_wrapper_0/clk_clk_n"
+        ]
+      },
+      "SYSCLK0_300_P_1": {
+        "ports": [
+          "SYSCLK0_300_P",
+          "memory_system_wrapper_0/clk_clk_p"
+        ]
+      },
+      "USB_UART_RX_1": {
+        "ports": [
+          "USB_UART_RX",
+          "memory_system_wrapper_0/UART_rxd"
+        ]
+      },
+      "memory_system_wrapper_0_UART_txd": {
+        "ports": [
+          "memory_system_wrapper_0/UART_txd",
+          "USB_UART_TX"
+        ]
+      },
+      "memory_system_wrapper_0_c0_ddr4_ui_clk": {
+        "ports": [
+          "memory_system_wrapper_0/c0_ddr4_ui_clk",
+          "c0_ddr4_ui_clk"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_act_n": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_act_n",
+          "c0_ddr4_act_n"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_adr": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_adr",
+          "c0_ddr4_adr"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_ba": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_ba",
+          "c0_ddr4_ba"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_bg": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_bg",
+          "c0_ddr4_bg"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_ck_c": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_ck_c",
+          "c0_ddr4_ck_c"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_ck_t": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_ck_t",
+          "c0_ddr4_ck_t"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_cke": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_cke",
+          "c0_ddr4_cke"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_cs_n": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_cs_n",
+          "c0_ddr4_cs_n"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_odt": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_odt",
+          "c0_ddr4_odt"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_par": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_par",
+          "c0_ddr4_parity"
+        ]
+      },
+      "memory_system_wrapper_0_ddr4_sdram_c0_reset_n": {
+        "ports": [
+          "memory_system_wrapper_0/ddr4_sdram_c0_reset_n",
+          "c0_ddr4_reset_n"
+        ]
+      },
+      "rst_n_1": {
+        "ports": [
+          "rst_n",
+          "memory_system_wrapper_0/rst_n"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "memory_system_wrapper_0/MATRIX_REGFILE_PORT_addr",
+          "memory_system_wrapper_0/MATRIX_REGFILE_PORT_din",
+          "memory_system_wrapper_0/MATRIX_REGFILE_PORT_clk",
+          "memory_system_wrapper_0/MATRIX_REGFILE_PORT_en",
+          "memory_system_wrapper_0/MATRIX_REGFILE_PORT_we",
+          "memory_system_wrapper_0/VECTOR_REGFILE_PORT_addr",
+          "memory_system_wrapper_0/VECTOR_REGFILE_PORT_clk",
+          "memory_system_wrapper_0/VECTOR_REGFILE_PORT_din",
+          "memory_system_wrapper_0/VECTOR_REGFILE_PORT_en",
+          "memory_system_wrapper_0/VECTOR_REGFILE_PORT_we"
+        ]
+      }
+    }
+  }
+}

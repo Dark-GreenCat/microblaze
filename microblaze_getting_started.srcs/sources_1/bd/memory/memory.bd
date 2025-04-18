@@ -1,0 +1,1945 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5757B5080DDAB024",
+      "device": "xcu250-figd2104-2L-e",
+      "gen_directory": "../../../../microblaze_getting_started.gen/sources_1/bd/memory",
+      "name": "memory",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ddr4_ctrl_c0": "",
+      "axi_cdma_matrix": "",
+      "input_rst_n_inv": "",
+      "axi_bram_ctrl_matrix": "",
+      "axi_smc_matrix": "",
+      "axi_bram_ctrl_vector": "",
+      "axi_cdma_vector": "",
+      "axi_smc_vector": "",
+      "c0_ddr4_ui_clk_sync_rst_inv": "",
+      "smartconnect_1": "",
+      "vector_register_file": "",
+      "matrix_register_file": "",
+      "matrix_addr_decode": "",
+      "vector_addr_decode": ""
+    },
+    "interface_ports": {
+      "ddr4_sdram_c0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:ddr4:1.0",
+        "vlnv": "xilinx.com:interface:ddr4_rtl:1.0",
+        "parameters": {
+          "AXI_ARBITRATION_SCHEME": {
+            "value": "RD_PRI_REG",
+            "value_src": "default"
+          },
+          "BURST_LENGTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "CAS_LATENCY": {
+            "value": "17",
+            "value_src": "default"
+          },
+          "CAS_WRITE_LATENCY": {
+            "value": "12",
+            "value_src": "default"
+          },
+          "CS_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "CUSTOM_PARTS": {
+            "value": "no_file_loaded",
+            "value_src": "default"
+          },
+          "DATA_MASK_ENABLED": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "72",
+            "value_src": "default"
+          },
+          "MEMORY_PART": {
+            "value": "MTA18ASF2G72PZ-2G3",
+            "value_src": "default"
+          },
+          "MEMORY_TYPE": {
+            "value": "RDIMMs",
+            "value_src": "default"
+          },
+          "MEM_ADDR_MAP": {
+            "value": "ROW_COLUMN_BANK_INTLV",
+            "value_src": "default"
+          },
+          "SLOT": {
+            "value": "Single",
+            "value_src": "default"
+          },
+          "TIMEPERIOD_PS": {
+            "value": "833",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ACT_N": {
+            "physical_name": "ddr4_sdram_c0_act_n",
+            "direction": "O"
+          },
+          "ADR": {
+            "physical_name": "ddr4_sdram_c0_adr",
+            "direction": "O",
+            "left": "16",
+            "right": "0"
+          },
+          "BA": {
+            "physical_name": "ddr4_sdram_c0_ba",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "BG": {
+            "physical_name": "ddr4_sdram_c0_bg",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "CK_C": {
+            "physical_name": "ddr4_sdram_c0_ck_c",
+            "direction": "O"
+          },
+          "CK_T": {
+            "physical_name": "ddr4_sdram_c0_ck_t",
+            "direction": "O"
+          },
+          "CKE": {
+            "physical_name": "ddr4_sdram_c0_cke",
+            "direction": "O"
+          },
+          "CS_N": {
+            "physical_name": "ddr4_sdram_c0_cs_n",
+            "direction": "O"
+          },
+          "DQ": {
+            "physical_name": "ddr4_sdram_c0_dq",
+            "direction": "IO",
+            "left": "71",
+            "right": "0"
+          },
+          "DQS_C": {
+            "physical_name": "ddr4_sdram_c0_dqs_c",
+            "direction": "IO",
+            "left": "17",
+            "right": "0"
+          },
+          "DQS_T": {
+            "physical_name": "ddr4_sdram_c0_dqs_t",
+            "direction": "IO",
+            "left": "17",
+            "right": "0"
+          },
+          "ODT": {
+            "physical_name": "ddr4_sdram_c0_odt",
+            "direction": "O"
+          },
+          "PAR": {
+            "physical_name": "ddr4_sdram_c0_par",
+            "direction": "O"
+          },
+          "RESET_N": {
+            "physical_name": "ddr4_sdram_c0_reset_n",
+            "direction": "O"
+          }
+        }
+      },
+      "aclk": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          }
+        },
+        "port_maps": {
+          "CLK_N": {
+            "physical_name": "aclk_clk_n",
+            "direction": "I"
+          },
+          "CLK_P": {
+            "physical_name": "aclk_clk_p",
+            "direction": "I"
+          }
+        }
+      },
+      "VECTOR_REGFILE_PORT": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "VECTOR_REGFILE_PORT_addr",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "VECTOR_REGFILE_PORT_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "VECTOR_REGFILE_PORT_din",
+            "direction": "I",
+            "left": "1023",
+            "right": "0"
+          },
+          "DOUT": {
+            "physical_name": "VECTOR_REGFILE_PORT_dout",
+            "direction": "O",
+            "left": "1023",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "VECTOR_REGFILE_PORT_en",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "VECTOR_REGFILE_PORT_we",
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          }
+        }
+      },
+      "MATRIX_REGFILE_PORT": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "MATRIX_REGFILE_PORT_addr",
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "MATRIX_REGFILE_PORT_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "MATRIX_REGFILE_PORT_din",
+            "direction": "I",
+            "left": "4095",
+            "right": "0"
+          },
+          "DOUT": {
+            "physical_name": "MATRIX_REGFILE_PORT_dout",
+            "direction": "O",
+            "left": "4095",
+            "right": "0"
+          },
+          "EN": {
+            "physical_name": "MATRIX_REGFILE_PORT_en",
+            "direction": "I"
+          },
+          "WE": {
+            "physical_name": "MATRIX_REGFILE_PORT_we",
+            "direction": "I",
+            "left": "511",
+            "right": "0"
+          }
+        }
+      },
+      "CDMA_VECTOR_S_AXI_CTRL": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+        "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "16"
+          },
+          "ARUSER_WIDTH": {
+            "value": "0"
+          },
+          "AWUSER_WIDTH": {
+            "value": "0"
+          },
+          "BUSER_WIDTH": {
+            "value": "0"
+          },
+          "CLK_DOMAIN": {
+            "value": "memory_aclk1_0",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_BURST": {
+            "value": "0"
+          },
+          "HAS_CACHE": {
+            "value": "0"
+          },
+          "HAS_LOCK": {
+            "value": "0"
+          },
+          "HAS_PROT": {
+            "value": "0"
+          },
+          "HAS_QOS": {
+            "value": "0"
+          },
+          "HAS_REGION": {
+            "value": "0"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "0"
+          },
+          "ID_WIDTH": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "MAX_BURST_LENGTH": {
+            "value": "1"
+          },
+          "NUM_READ_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_READ_THREADS": {
+            "value": "1"
+          },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_WRITE_THREADS": {
+            "value": "1"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          },
+          "RUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "RUSER_WIDTH": {
+            "value": "0"
+          },
+          "SUPPORTS_NARROW_BURST": {
+            "value": "0"
+          },
+          "WUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "WUSER_WIDTH": {
+            "value": "0"
+          }
+        },
+        "address_space_ref": "CDMA_VECTOR_S_AXI_CTRL",
+        "base_address": {
+          "minimum": "0x00000000",
+          "maximum": "0x0000FFFF",
+          "width": "16"
+        },
+        "port_maps": {
+          "ARADDR": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_araddr",
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "ARREADY": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_arready",
+            "direction": "O"
+          },
+          "ARVALID": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_arvalid",
+            "direction": "I"
+          },
+          "AWADDR": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_awaddr",
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "AWREADY": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_awready",
+            "direction": "O"
+          },
+          "AWVALID": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_awvalid",
+            "direction": "I"
+          },
+          "BREADY": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_bready",
+            "direction": "I"
+          },
+          "BRESP": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_bresp",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "BVALID": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_bvalid",
+            "direction": "O"
+          },
+          "RDATA": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_rdata",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RREADY": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_rready",
+            "direction": "I"
+          },
+          "RRESP": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_rresp",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "RVALID": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_rvalid",
+            "direction": "O"
+          },
+          "WDATA": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_wdata",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WREADY": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_wready",
+            "direction": "O"
+          },
+          "WVALID": {
+            "physical_name": "CDMA_VECTOR_S_AXI_CTRL_wvalid",
+            "direction": "I"
+          }
+        }
+      },
+      "CDMA_MATRIX_S_AXI_CTRL": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+        "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "16"
+          },
+          "ARUSER_WIDTH": {
+            "value": "0"
+          },
+          "AWUSER_WIDTH": {
+            "value": "0"
+          },
+          "BUSER_WIDTH": {
+            "value": "0"
+          },
+          "CLK_DOMAIN": {
+            "value": "memory_aclk1_0",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_BURST": {
+            "value": "0"
+          },
+          "HAS_CACHE": {
+            "value": "0"
+          },
+          "HAS_LOCK": {
+            "value": "0"
+          },
+          "HAS_PROT": {
+            "value": "0"
+          },
+          "HAS_QOS": {
+            "value": "0"
+          },
+          "HAS_REGION": {
+            "value": "0"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "0"
+          },
+          "ID_WIDTH": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "MAX_BURST_LENGTH": {
+            "value": "1"
+          },
+          "NUM_READ_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_READ_THREADS": {
+            "value": "1"
+          },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_WRITE_THREADS": {
+            "value": "1"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          },
+          "RUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "RUSER_WIDTH": {
+            "value": "0"
+          },
+          "SUPPORTS_NARROW_BURST": {
+            "value": "0"
+          },
+          "WUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "WUSER_WIDTH": {
+            "value": "0"
+          }
+        },
+        "address_space_ref": "CDMA_MATRIX_S_AXI_CTRL",
+        "base_address": {
+          "minimum": "0x00000000",
+          "maximum": "0x0000FFFF",
+          "width": "16"
+        },
+        "port_maps": {
+          "ARADDR": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_araddr",
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "ARREADY": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_arready",
+            "direction": "O"
+          },
+          "ARVALID": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_arvalid",
+            "direction": "I"
+          },
+          "AWADDR": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_awaddr",
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "AWREADY": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_awready",
+            "direction": "O"
+          },
+          "AWVALID": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_awvalid",
+            "direction": "I"
+          },
+          "BREADY": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_bready",
+            "direction": "I"
+          },
+          "BRESP": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_bresp",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "BVALID": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_bvalid",
+            "direction": "O"
+          },
+          "RDATA": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_rdata",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RREADY": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_rready",
+            "direction": "I"
+          },
+          "RRESP": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_rresp",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "RVALID": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_rvalid",
+            "direction": "O"
+          },
+          "WDATA": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_wdata",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WREADY": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_wready",
+            "direction": "O"
+          },
+          "WVALID": {
+            "physical_name": "CDMA_MATRIX_S_AXI_CTRL_wvalid",
+            "direction": "I"
+          }
+        }
+      },
+      "C0_DDR4_S_AXI_CTRL": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+        "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+        "parameters": {
+          "ADDR_WIDTH": {
+            "value": "32"
+          },
+          "ARUSER_WIDTH": {
+            "value": "0"
+          },
+          "AWUSER_WIDTH": {
+            "value": "0"
+          },
+          "BUSER_WIDTH": {
+            "value": "0"
+          },
+          "CLK_DOMAIN": {
+            "value": "memory_ddr4_0_0_c0_ddr4_ui_clk",
+            "value_src": "default_prop"
+          },
+          "DATA_WIDTH": {
+            "value": "32"
+          },
+          "FREQ_HZ": {
+            "value": "300000000",
+            "value_src": "user_prop"
+          },
+          "HAS_BRESP": {
+            "value": "1"
+          },
+          "HAS_BURST": {
+            "value": "0"
+          },
+          "HAS_CACHE": {
+            "value": "0"
+          },
+          "HAS_LOCK": {
+            "value": "0"
+          },
+          "HAS_PROT": {
+            "value": "0"
+          },
+          "HAS_QOS": {
+            "value": "0"
+          },
+          "HAS_REGION": {
+            "value": "0"
+          },
+          "HAS_RRESP": {
+            "value": "1"
+          },
+          "HAS_WSTRB": {
+            "value": "0"
+          },
+          "ID_WIDTH": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "MAX_BURST_LENGTH": {
+            "value": "1"
+          },
+          "NUM_READ_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_READ_THREADS": {
+            "value": "1"
+          },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "1"
+          },
+          "NUM_WRITE_THREADS": {
+            "value": "1"
+          },
+          "PHASE": {
+            "value": "0.00",
+            "value_src": "const_prop"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE"
+          },
+          "RUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "RUSER_WIDTH": {
+            "value": "0"
+          },
+          "SUPPORTS_NARROW_BURST": {
+            "value": "0"
+          },
+          "WUSER_BITS_PER_BYTE": {
+            "value": "0"
+          },
+          "WUSER_WIDTH": {
+            "value": "0"
+          }
+        },
+        "address_space_ref": "C0_DDR4_S_AXI_CTRL",
+        "base_address": {
+          "minimum": "0x00000000",
+          "maximum": "0xFFFFFFFF",
+          "width": "32"
+        },
+        "port_maps": {
+          "ARADDR": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_araddr",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ARREADY": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_arready",
+            "direction": "O"
+          },
+          "ARVALID": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_arvalid",
+            "direction": "I"
+          },
+          "AWADDR": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_awaddr",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "AWREADY": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_awready",
+            "direction": "O"
+          },
+          "AWVALID": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_awvalid",
+            "direction": "I"
+          },
+          "BREADY": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_bready",
+            "direction": "I"
+          },
+          "BRESP": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_bresp",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "BVALID": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_bvalid",
+            "direction": "O"
+          },
+          "RDATA": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_rdata",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RREADY": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_rready",
+            "direction": "I"
+          },
+          "RRESP": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_rresp",
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "RVALID": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_rvalid",
+            "direction": "O"
+          },
+          "WDATA": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_wdata",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WREADY": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_wready",
+            "direction": "O"
+          },
+          "WVALID": {
+            "physical_name": "C0_DDR4_S_AXI_CTRL_wvalid",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "ddr4_sdram_c0_init_calib_complete": {
+        "direction": "O"
+      },
+      "cdma_matrix_introut": {
+        "type": "intr",
+        "direction": "O",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "cdma_vector_introut": {
+        "type": "intr",
+        "direction": "O",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "ddr4_sdram_c0_interrupt": {
+        "direction": "O"
+      },
+      "cdma_ctrl_aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "CDMA_MATRIX_S_AXI_CTRL:CDMA_VECTOR_S_AXI_CTRL"
+          },
+          "CLK_DOMAIN": {
+            "value": "memory_aclk1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "c0_ddr4_ctrl_clk": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "C0_DDR4_S_AXI_CTRL"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "rst_n"
+          },
+          "CLK_DOMAIN": {
+            "value": "memory_ddr4_0_0_c0_ddr4_ui_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "300000000",
+            "value_src": "user_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.00",
+            "value_src": "const_prop"
+          }
+        }
+      }
+    },
+    "components": {
+      "ddr4_ctrl_c0": {
+        "vlnv": "xilinx.com:ip:ddr4:2.2",
+        "ip_revision": "23",
+        "xci_name": "memory_ddr4_0_0",
+        "xci_path": "ip/memory_ddr4_0_0/memory_ddr4_0_0.xci",
+        "inst_hier_path": "ddr4_ctrl_c0",
+        "parameters": {
+          "ADDN_UI_CLKOUT1_FREQ_HZ": {
+            "value": "None"
+          },
+          "C0.DDR4_AUTO_AP_COL_A3": {
+            "value": "true"
+          },
+          "C0.DDR4_MCS_ECC": {
+            "value": "false"
+          },
+          "C0.DDR4_Mem_Add_Map": {
+            "value": "ROW_COLUMN_BANK_INTLV"
+          },
+          "C0.DDR4_SAVE_RESTORE": {
+            "value": "false"
+          },
+          "C0.DDR4_SELF_REFRESH": {
+            "value": "false"
+          },
+          "C0.DDR4_Slot": {
+            "value": "Single"
+          },
+          "C0_CLOCK_BOARD_INTERFACE": {
+            "value": "default_300mhz_clk0"
+          },
+          "C0_DDR4_BOARD_INTERFACE": {
+            "value": "ddr4_sdram_c0"
+          },
+          "Debug_Signal": {
+            "value": "Disable"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "resetn"
+          }
+        },
+        "interface_ports": {
+          "C0_DDR4_S_AXI_CTRL": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "C0_DDR4_MEMORY_MAP_CTRL"
+          },
+          "C0_DDR4_S_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "C0_DDR4_MEMORY_MAP"
+          }
+        },
+        "addressing": {
+          "memory_maps": {
+            "C0_DDR4_MEMORY_MAP": {
+              "address_blocks": {
+                "C0_DDR4_ADDRESS_BLOCK": {
+                  "base_address": "0",
+                  "range": "16G",
+                  "width": "34",
+                  "usage": "memory",
+                  "offset_base_param": "C0_DDR4_MEMORY_MAP_BASEADDR",
+                  "offset_high_param": "C0_DDR4_MEMORY_MAP_HIGHADDR"
+                }
+              }
+            },
+            "C0_DDR4_MEMORY_MAP_CTRL": {
+              "address_blocks": {
+                "C0_REG": {
+                  "base_address": "0",
+                  "range": "4K",
+                  "width": "12",
+                  "usage": "register",
+                  "offset_base_param": "C0_DDR4_MEMORY_MAP_CTRL_BASEADDR",
+                  "offset_high_param": "C0_DDR4_MEMORY_MAP_CTRL_HIGHADDR"
+                }
+              }
+            }
+          }
+        }
+      },
+      "axi_cdma_matrix": {
+        "vlnv": "xilinx.com:ip:axi_cdma:4.1",
+        "ip_revision": "31",
+        "xci_name": "memory_axi_cdma_0_0",
+        "xci_path": "ip/memory_axi_cdma_0_0/memory_axi_cdma_0_0.xci",
+        "inst_hier_path": "axi_cdma_matrix",
+        "parameters": {
+          "C_ADDR_WIDTH": {
+            "value": "34"
+          },
+          "C_INCLUDE_SG": {
+            "value": "0"
+          },
+          "C_M_AXI_DATA_WIDTH": {
+            "value": "512"
+          },
+          "C_M_AXI_MAX_BURST_LEN": {
+            "value": "64"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0x0003FFFFFFFF",
+              "width": "34"
+            },
+            "parameters": {
+              "master_id": {
+                "value": "1"
+              }
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data": {
+              "range": "16G",
+              "width": "34"
+            }
+          }
+        }
+      },
+      "input_rst_n_inv": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "4",
+        "xci_name": "memory_resetn_inv_0_0",
+        "xci_path": "ip/memory_resetn_inv_0_0/memory_resetn_inv_0_0.xci",
+        "inst_hier_path": "input_rst_n_inv",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_bram_ctrl_matrix": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "ip_revision": "10",
+        "xci_name": "memory_axi_bram_ctrl_0_3",
+        "xci_path": "ip/memory_axi_bram_ctrl_0_3/memory_axi_bram_ctrl_0_3.xci",
+        "inst_hier_path": "axi_bram_ctrl_matrix",
+        "parameters": {
+          "DATA_WIDTH": {
+            "value": "1024"
+          },
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_smc_matrix": {
+        "vlnv": "xilinx.com:ip:smartconnect:1.0",
+        "ip_revision": "23",
+        "xci_name": "memory_axi_smc_3",
+        "xci_path": "ip/memory_axi_smc_3/memory_axi_smc_3.xci",
+        "inst_hier_path": "axi_smc_matrix",
+        "parameters": {
+          "NUM_MI": {
+            "value": "2"
+          },
+          "NUM_SI": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              }
+            },
+            "bridges": [
+              "M00_AXI",
+              "M01_AXI"
+            ]
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "32"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M01_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "64"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "axi_bram_ctrl_vector": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "ip_revision": "10",
+        "xci_name": "memory_axi_bram_ctrl_0_5",
+        "xci_path": "ip/memory_axi_bram_ctrl_0_5/memory_axi_bram_ctrl_0_5.xci",
+        "inst_hier_path": "axi_bram_ctrl_vector",
+        "parameters": {
+          "DATA_WIDTH": {
+            "value": "1024"
+          },
+          "READ_LATENCY": {
+            "value": "1"
+          },
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_cdma_vector": {
+        "vlnv": "xilinx.com:ip:axi_cdma:4.1",
+        "ip_revision": "31",
+        "xci_name": "memory_axi_cdma_0_3",
+        "xci_path": "ip/memory_axi_cdma_0_3/memory_axi_cdma_0_3.xci",
+        "inst_hier_path": "axi_cdma_vector",
+        "parameters": {
+          "C_ADDR_WIDTH": {
+            "value": "34"
+          },
+          "C_INCLUDE_SG": {
+            "value": "0"
+          },
+          "C_M_AXI_DATA_WIDTH": {
+            "value": "512"
+          },
+          "C_M_AXI_MAX_BURST_LEN": {
+            "value": "64"
+          }
+        },
+        "interface_ports": {
+          "M_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0x0003FFFFFFFF",
+              "width": "34"
+            },
+            "parameters": {
+              "master_id": {
+                "value": "3"
+              }
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data": {
+              "range": "16G",
+              "width": "34"
+            }
+          }
+        }
+      },
+      "axi_smc_vector": {
+        "vlnv": "xilinx.com:ip:smartconnect:1.0",
+        "ip_revision": "23",
+        "xci_name": "memory_axi_smc_1_1",
+        "xci_path": "ip/memory_axi_smc_1_1/memory_axi_smc_1_1.xci",
+        "inst_hier_path": "axi_smc_vector",
+        "parameters": {
+          "NUM_MI": {
+            "value": "2"
+          },
+          "NUM_SI": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              }
+            },
+            "bridges": [
+              "M00_AXI",
+              "M01_AXI"
+            ]
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "32"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M01_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "32"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "c0_ddr4_ui_clk_sync_rst_inv": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "4",
+        "xci_name": "memory_resetn_inv_0_1",
+        "xci_path": "ip/memory_resetn_inv_0_1/memory_resetn_inv_0_1.xci",
+        "inst_hier_path": "c0_ddr4_ui_clk_sync_rst_inv",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "smartconnect_1": {
+        "vlnv": "xilinx.com:ip:smartconnect:1.0",
+        "ip_revision": "23",
+        "xci_name": "memory_smartconnect_1_0",
+        "xci_path": "ip/memory_smartconnect_1_0/memory_smartconnect_1_0.xci",
+        "inst_hier_path": "smartconnect_1",
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              }
+            },
+            "bridges": [
+              "M00_AXI"
+            ]
+          },
+          "S01_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              }
+            },
+            "bridges": [
+              "M00_AXI"
+            ]
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "128"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "vector_register_file": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "8",
+        "xci_name": "memory_blk_mem_gen_0_0",
+        "xci_path": "ip/memory_blk_mem_gen_0_0/memory_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "vector_register_file",
+        "parameters": {
+          "Byte_Size": {
+            "value": "8"
+          },
+          "EN_SAFETY_CKT": {
+            "value": "false"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Register_PortA_Output_of_Memory_Core": {
+            "value": "false"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "true"
+          },
+          "Write_Depth_A": {
+            "value": "16"
+          },
+          "Write_Width_A": {
+            "value": "1024"
+          },
+          "Write_Width_B": {
+            "value": "1024"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "matrix_register_file": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "8",
+        "xci_name": "memory_blk_mem_gen_0_1",
+        "xci_path": "ip/memory_blk_mem_gen_0_1/memory_blk_mem_gen_0_1.xci",
+        "inst_hier_path": "matrix_register_file",
+        "parameters": {
+          "Byte_Size": {
+            "value": "8"
+          },
+          "EN_SAFETY_CKT": {
+            "value": "false"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Register_PortA_Output_of_Memory_Core": {
+            "value": "false"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "true"
+          },
+          "Use_RSTA_Pin": {
+            "value": "true"
+          },
+          "Write_Depth_A": {
+            "value": "16"
+          },
+          "Write_Width_A": {
+            "value": "1024"
+          },
+          "Write_Width_B": {
+            "value": "4096"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "matrix_addr_decode": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "memory_xlslice_0_1",
+        "xci_path": "ip/memory_xlslice_0_1/memory_xlslice_0_1.xci",
+        "inst_hier_path": "matrix_addr_decode",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "10"
+          },
+          "DIN_TO": {
+            "value": "7"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "vector_addr_decode": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "memory_matrix_addr_decode_0",
+        "xci_path": "ip/memory_matrix_addr_decode_0/memory_matrix_addr_decode_0.xci",
+        "inst_hier_path": "vector_addr_decode",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "10"
+          },
+          "DIN_TO": {
+            "value": "7"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "BRAM_PORTB_0_1": {
+        "interface_ports": [
+          "VECTOR_REGFILE_PORT",
+          "vector_register_file/BRAM_PORTB"
+        ]
+      },
+      "BRAM_PORTB_1_1": {
+        "interface_ports": [
+          "MATRIX_REGFILE_PORT",
+          "matrix_register_file/BRAM_PORTB"
+        ]
+      },
+      "C0_DDR4_S_AXI_CTRL_0_1": {
+        "interface_ports": [
+          "C0_DDR4_S_AXI_CTRL",
+          "ddr4_ctrl_c0/C0_DDR4_S_AXI_CTRL"
+        ]
+      },
+      "S_AXI_LITE_0_1": {
+        "interface_ports": [
+          "CDMA_VECTOR_S_AXI_CTRL",
+          "axi_cdma_vector/S_AXI_LITE"
+        ]
+      },
+      "S_AXI_LITE_1_1": {
+        "interface_ports": [
+          "CDMA_MATRIX_S_AXI_CTRL",
+          "axi_cdma_matrix/S_AXI_LITE"
+        ]
+      },
+      "axi_cdma_0_M_AXI": {
+        "interface_ports": [
+          "axi_cdma_matrix/M_AXI",
+          "axi_smc_matrix/S00_AXI"
+        ]
+      },
+      "axi_cdma_1_M_AXI": {
+        "interface_ports": [
+          "axi_cdma_vector/M_AXI",
+          "axi_smc_vector/S00_AXI"
+        ]
+      },
+      "axi_smc_1_M00_AXI": {
+        "interface_ports": [
+          "axi_smc_vector/M00_AXI",
+          "axi_bram_ctrl_vector/S_AXI"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc_matrix/M00_AXI",
+          "axi_bram_ctrl_matrix/S_AXI"
+        ]
+      },
+      "axi_smc_matrix_M01_AXI": {
+        "interface_ports": [
+          "axi_smc_matrix/M01_AXI",
+          "smartconnect_1/S01_AXI"
+        ]
+      },
+      "axi_smc_vector_M01_AXI": {
+        "interface_ports": [
+          "axi_smc_vector/M01_AXI",
+          "smartconnect_1/S00_AXI"
+        ]
+      },
+      "ddr4_0_C0_DDR4": {
+        "interface_ports": [
+          "ddr4_sdram_c0",
+          "ddr4_ctrl_c0/C0_DDR4"
+        ]
+      },
+      "default_300mhz_clk0_1": {
+        "interface_ports": [
+          "aclk",
+          "ddr4_ctrl_c0/C0_SYS_CLK"
+        ]
+      },
+      "smartconnect_1_M00_AXI": {
+        "interface_ports": [
+          "smartconnect_1/M00_AXI",
+          "ddr4_ctrl_c0/C0_DDR4_S_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "aclk1_0_1": {
+        "ports": [
+          "cdma_ctrl_aclk",
+          "axi_cdma_matrix/s_axi_lite_aclk",
+          "axi_cdma_vector/s_axi_lite_aclk"
+        ]
+      },
+      "axi_bram_ctrl_matrix_bram_addr_a": {
+        "ports": [
+          "axi_bram_ctrl_matrix/bram_addr_a",
+          "matrix_addr_decode/Din"
+        ]
+      },
+      "axi_bram_ctrl_matrix_bram_clk_a": {
+        "ports": [
+          "axi_bram_ctrl_matrix/bram_clk_a",
+          "matrix_register_file/clka"
+        ]
+      },
+      "axi_bram_ctrl_matrix_bram_en_a": {
+        "ports": [
+          "axi_bram_ctrl_matrix/bram_en_a",
+          "matrix_register_file/ena"
+        ]
+      },
+      "axi_bram_ctrl_matrix_bram_rst_a": {
+        "ports": [
+          "axi_bram_ctrl_matrix/bram_rst_a",
+          "matrix_register_file/rsta"
+        ]
+      },
+      "axi_bram_ctrl_matrix_bram_we_a": {
+        "ports": [
+          "axi_bram_ctrl_matrix/bram_we_a",
+          "matrix_register_file/wea"
+        ]
+      },
+      "axi_bram_ctrl_matrix_bram_wrdata_a": {
+        "ports": [
+          "axi_bram_ctrl_matrix/bram_wrdata_a",
+          "matrix_register_file/dina"
+        ]
+      },
+      "axi_bram_ctrl_vector_bram_addr_a": {
+        "ports": [
+          "axi_bram_ctrl_vector/bram_addr_a",
+          "vector_addr_decode/Din"
+        ]
+      },
+      "axi_bram_ctrl_vector_bram_clk_a": {
+        "ports": [
+          "axi_bram_ctrl_vector/bram_clk_a",
+          "vector_register_file/clka"
+        ]
+      },
+      "axi_bram_ctrl_vector_bram_en_a": {
+        "ports": [
+          "axi_bram_ctrl_vector/bram_en_a",
+          "vector_register_file/ena"
+        ]
+      },
+      "axi_bram_ctrl_vector_bram_rst_a": {
+        "ports": [
+          "axi_bram_ctrl_vector/bram_rst_a",
+          "vector_register_file/rsta"
+        ]
+      },
+      "axi_bram_ctrl_vector_bram_we_a": {
+        "ports": [
+          "axi_bram_ctrl_vector/bram_we_a",
+          "vector_register_file/wea"
+        ]
+      },
+      "axi_bram_ctrl_vector_bram_wrdata_a": {
+        "ports": [
+          "axi_bram_ctrl_vector/bram_wrdata_a",
+          "vector_register_file/dina"
+        ]
+      },
+      "axi_cdma_0_cdma_introut": {
+        "ports": [
+          "axi_cdma_matrix/cdma_introut",
+          "cdma_matrix_introut"
+        ]
+      },
+      "axi_cdma_1_cdma_introut": {
+        "ports": [
+          "axi_cdma_vector/cdma_introut",
+          "cdma_vector_introut"
+        ]
+      },
+      "ddr4_0_c0_ddr4_interrupt": {
+        "ports": [
+          "ddr4_ctrl_c0/c0_ddr4_interrupt",
+          "ddr4_sdram_c0_interrupt"
+        ]
+      },
+      "ddr4_0_c0_ddr4_ui_clk_sync_rst": {
+        "ports": [
+          "c0_ddr4_ui_clk_sync_rst_inv/Res",
+          "axi_cdma_vector/s_axi_lite_aresetn",
+          "axi_cdma_matrix/s_axi_lite_aresetn",
+          "axi_smc_matrix/aresetn",
+          "axi_smc_vector/aresetn",
+          "axi_bram_ctrl_vector/s_axi_aresetn",
+          "axi_bram_ctrl_matrix/s_axi_aresetn",
+          "ddr4_ctrl_c0/c0_ddr4_aresetn",
+          "smartconnect_1/aresetn"
+        ]
+      },
+      "ddr4_0_c0_ddr4_ui_clk_sync_rst1": {
+        "ports": [
+          "ddr4_ctrl_c0/c0_ddr4_ui_clk_sync_rst",
+          "c0_ddr4_ui_clk_sync_rst_inv/Op1"
+        ]
+      },
+      "ddr4_0_c0_init_calib_complete": {
+        "ports": [
+          "ddr4_ctrl_c0/c0_init_calib_complete",
+          "ddr4_sdram_c0_init_calib_complete"
+        ]
+      },
+      "ddr4_ctrl_c0_c0_ddr4_ui_clk": {
+        "ports": [
+          "ddr4_ctrl_c0/c0_ddr4_ui_clk",
+          "c0_ddr4_ctrl_clk",
+          "axi_cdma_matrix/m_axi_aclk",
+          "axi_bram_ctrl_matrix/s_axi_aclk",
+          "axi_smc_matrix/aclk",
+          "axi_cdma_vector/m_axi_aclk",
+          "axi_smc_vector/aclk",
+          "axi_bram_ctrl_vector/s_axi_aclk",
+          "smartconnect_1/aclk"
+        ]
+      },
+      "matrix_addr_decode1_Dout": {
+        "ports": [
+          "vector_addr_decode/Dout",
+          "vector_register_file/addra"
+        ]
+      },
+      "matrix_register_file_douta": {
+        "ports": [
+          "matrix_register_file/douta",
+          "axi_bram_ctrl_matrix/bram_rddata_a"
+        ]
+      },
+      "resetn_1": {
+        "ports": [
+          "rst_n",
+          "input_rst_n_inv/Op1"
+        ]
+      },
+      "resetn_inv_0_Res": {
+        "ports": [
+          "input_rst_n_inv/Res",
+          "ddr4_ctrl_c0/sys_rst"
+        ]
+      },
+      "vector_register_file_douta": {
+        "ports": [
+          "vector_register_file/douta",
+          "axi_bram_ctrl_vector/bram_rddata_a"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "matrix_addr_decode/Dout",
+          "matrix_register_file/addra"
+        ]
+      }
+    },
+    "addressing": {
+      "/": {
+        "address_spaces": {
+          "C0_DDR4_S_AXI_CTRL": {
+            "range": "4G",
+            "width": "32",
+            "segments": {
+              "SEG_ddr4_ctrl_c0_C0_REG": {
+                "address_block": "/ddr4_ctrl_c0/C0_DDR4_MEMORY_MAP_CTRL/C0_REG",
+                "offset": "0x80000000",
+                "range": "1M",
+                "offset_base_param": "C0_DDR4_MEMORY_MAP_CTRL_BASEADDR",
+                "offset_high_param": "C0_DDR4_MEMORY_MAP_CTRL_HIGHADDR"
+              }
+            }
+          },
+          "CDMA_MATRIX_S_AXI_CTRL": {
+            "range": "64K",
+            "width": "16",
+            "segments": {
+              "SEG_axi_cdma_matrix_Reg": {
+                "address_block": "/axi_cdma_matrix/S_AXI_LITE/Reg",
+                "offset": "0x0000",
+                "range": "256"
+              }
+            }
+          },
+          "CDMA_VECTOR_S_AXI_CTRL": {
+            "range": "64K",
+            "width": "16",
+            "segments": {
+              "SEG_axi_cdma_vector_Reg": {
+                "address_block": "/axi_cdma_vector/S_AXI_LITE/Reg",
+                "offset": "0x0000",
+                "range": "256"
+              }
+            }
+          }
+        }
+      },
+      "/axi_cdma_matrix": {
+        "address_spaces": {
+          "Data": {
+            "segments": {
+              "SEG_axi_bram_ctrl_0_Mem0": {
+                "address_block": "/axi_bram_ctrl_matrix/S_AXI/Mem0",
+                "offset": "0x0C0000000",
+                "range": "32K"
+              },
+              "SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK": {
+                "address_block": "/ddr4_ctrl_c0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK",
+                "offset": "0x200000000",
+                "range": "8G",
+                "offset_base_param": "C0_DDR4_MEMORY_MAP_BASEADDR",
+                "offset_high_param": "C0_DDR4_MEMORY_MAP_HIGHADDR"
+              }
+            }
+          }
+        }
+      },
+      "/axi_cdma_vector": {
+        "address_spaces": {
+          "Data": {
+            "segments": {
+              "SEG_axi_bram_ctrl_1_Mem0": {
+                "address_block": "/axi_bram_ctrl_vector/S_AXI/Mem0",
+                "offset": "0x0C0000000",
+                "range": "4K"
+              },
+              "SEG_ddr4_ctrl_c0_C0_DDR4_ADDRESS_BLOCK": {
+                "address_block": "/ddr4_ctrl_c0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK",
+                "offset": "0x200000000",
+                "range": "8G",
+                "offset_base_param": "C0_DDR4_MEMORY_MAP_BASEADDR",
+                "offset_high_param": "C0_DDR4_MEMORY_MAP_HIGHADDR"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.663698",
+   "Default View_TopLeft":"286,18",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port ddr4_sdram_c0 -pg 1 -lvl 3 -x 1400 -y 330 -defaultsOSRD
+preplace port MATRIX_REGFILE_PORT -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port VECTOR_REGFILE_PORT -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port UART -pg 1 -lvl 3 -x 1400 -y 70 -defaultsOSRD
+preplace port port-id_rst_n -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port port-id_c0_ddr4_ui_clk -pg 1 -lvl 3 -x 1400 -y 430 -defaultsOSRD
+preplace portBus start_matrix_mult_request -pg 1 -lvl 3 -x 1400 -y 540 -defaultsOSRD
+preplace portBus src_matrix_reg_addr -pg 1 -lvl 3 -x 1400 -y 520 -defaultsOSRD
+preplace portBus src_vector_reg_addr -pg 1 -lvl 3 -x 1400 -y 560 -defaultsOSRD
+preplace portBus dst_vector_reg_addr -pg 1 -lvl 3 -x 1400 -y 500 -defaultsOSRD
+preplace inst controller -pg 1 -lvl 1 -x 380 -y 160 -defaultsOSRD
+preplace inst memory -pg 1 -lvl 2 -x 1030 -y 380 -defaultsOSRD
+preplace netloc controller_dst_vector_reg_addr 1 1 2 NJ 250 1360J
+preplace netloc controller_src_matrix_reg_addr 1 1 2 NJ 230 1370J
+preplace netloc controller_src_vector_reg_addr 1 1 2 NJ 210 1340J
+preplace netloc controller_start_matrix_mult_request 1 1 2 NJ 190 1380J
+preplace netloc memory_cdma_matrix_introut 1 0 3 60 550 NJ 550 1320
+preplace netloc memory_cdma_vector_introut 1 0 3 100 510 NJ 510 1300
+preplace netloc memory_ddr4_sdram_c0_init_calib_complete 1 0 3 90 530 NJ 530 1330
+preplace netloc memory_ddr4_sdram_c0_interrupt 1 0 3 80 540 NJ 540 1310
+preplace netloc resetn_1 1 0 2 60 10 750J
+preplace netloc memory_c0_ddr4_ctrl_clk 1 0 3 70 360 720 520 1350
+preplace netloc MATRIX_REGFILE_PORT_0_1 1 0 2 NJ 350 NJ
+preplace netloc VECTOR_REGFILE_PORT_0_1 1 0 2 NJ 330 NJ
+preplace netloc controller_C0_DDR4_S_AXI_CTRL 1 1 1 730 130n
+preplace netloc controller_CDMA_MATRIX_S_AXI_CTRL 1 1 1 740 110n
+preplace netloc controller_CDMA_VECTOR_S_AXI_CTRL 1 1 1 760 90n
+preplace netloc controller_UART 1 1 2 NJ 70 NJ
+preplace netloc default_300mhz_clk0_1 1 0 2 NJ 310 NJ
+preplace netloc memory_0_ddr4_sdram_c0 1 2 1 NJ 330
+levelinfo -pg 1 0 380 1030 1400
+pagesize -pg 1 -db -bbox -sgen -230 0 1680 630
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_board_cnt":"4",
+   "da_clkrst_cnt":"2"
+}
